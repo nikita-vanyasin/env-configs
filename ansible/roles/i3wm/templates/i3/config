@@ -199,3 +199,6 @@ exec thunderbird
 
 
 
+
+
+for_window [class="Gnome-calendar"] floating enable
