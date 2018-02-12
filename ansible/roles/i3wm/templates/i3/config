@@ -118,12 +118,15 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
+
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "zenity --question --text 'DO YOU WANT TO LOGOUT? This will end your X session.' --ok-label 'Logout' --cancel-label 'Cancel' && i3-msg exit"
+
 # suspend
-bindsym $mod+Shift+s exec "i3-nagbar -t warning -m 'Do you really want to suspend?' -b 'Yes, suspend' 'systemctl suspend'"
+bindsym $mod+Shift+s exec "zenity --question --text 'DO YOU WANT TO SUSPEND ME MTHFCKR?' --ok-label 'Suspend' --cancel-label 'Noooo, sorry!' && systemctl suspend"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
