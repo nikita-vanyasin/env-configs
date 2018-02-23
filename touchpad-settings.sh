@@ -1,3 +1,4 @@
+#!/bin/bash
 
 # xinput --list
 # 12 is input id
