@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# xinput --list
-# 12 is input id
-# xinput --watch-props 12 
 
+ID=$(xinput --list  | grep -i touch | awk '{print $6}' | awk -F "="  '{print $2}')
 
-xinput --set-prop 12 "Synaptics Palm Detection" 1
-xinput --set-prop 12 "Synaptics Two-Finger Scrolling" 1 1
+echo $ID
+
+xinput --set-prop $ID "Synaptics Palm Detection" 1
+xinput --set-prop $ID "Synaptics Two-Finger Scrolling" 1 1

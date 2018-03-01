@@ -180,7 +180,7 @@ bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 
 # Touchpad controls
-bindsym $mod+t exec ~/toggletouchpad.sh # toggle touchpad
+bindsym $mod+t exec ~/toggle-touchpad.sh
 
 # print screen
 bindsym --release Print exec flameshot gui
@@ -195,6 +195,8 @@ workspace_auto_back_and_forth yes
 exec --no-startup-id xsetroot -solid "#000000"
 exec "setxkbmap -layout us,ru"
 exec "setxkbmap -option 'grp:caps_toggle,grp_led:caps'"
+exec ~/touchpad-settings.sh
+
 
 exec google-chrome-stable
 exec /opt/JetBrains/jetbrains-toolbox
