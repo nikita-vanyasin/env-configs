@@ -215,5 +215,5 @@ exec thunderbird
 
 
 
-
 for_window [class="Gnome-calendar"] floating enable
+for_window [class="upwork"] floating enable
