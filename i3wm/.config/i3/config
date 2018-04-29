@@ -17,7 +17,7 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 12
+font pango:DejaVu Sans Mono 10
 
 # Before i3 v4.8, we used to recommend this one as the default:
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -41,6 +41,8 @@ bindsym $mod+Shift+q kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+focus_follows_mouse no
 
 # change focus
 #bindsym $mod+j focus left
@@ -93,9 +95,9 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1: web
-bindsym $mod+2 workspace 2: mail
-bindsym $mod+3 workspace 3: dev
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
 bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
@@ -105,9 +107,9 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1: web
-bindsym $mod+Shift+2 move container to workspace 2: mail
-bindsym $mod+Shift+3 move container to workspace 3: dev
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
 bindsym $mod+Shift+4 move container to workspace 4
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
@@ -211,9 +213,21 @@ exec --no-startup-id ~/touchpad-settings.sh
 exec google-chrome-stable
 exec /opt/JetBrains/jetbrains-toolbox
 exec thunderbird
-
-
+exec Telegram
 
 
 for_window [class="Gnome-calendar"] floating enable
 for_window [class="upwork"] floating enable
+
+for_window [class="Telegram"] layout stacking
+for_window [class="Thunderbird"] layout stacking
+
+assign [class="Telegram"] 2
+assign [class="Thunderbird"] 2
+
+
+
+
+
+
+
