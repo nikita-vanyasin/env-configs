@@ -23,11 +23,11 @@ Xft.hintstyle:              hintslight
 *.color2:      #a3be8c
 *.color10:     #a3be8c
 ! yellow
-*.color3:      #efcf8f
-*.color11:     #efcf8f
+*.color3:      #a0a042
+*.color11:     #c0c000
 ! blue
-*.color4:      #7676db
-*.color12:     #7676db
+*.color4:      #4444e5
+*.color12:     #4444e5
 ! magenta
 *.color5:      #b48ead
 *.color13:     #b48ead
