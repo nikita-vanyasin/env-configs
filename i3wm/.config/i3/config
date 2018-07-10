@@ -214,6 +214,7 @@ exec google-chrome-stable
 exec /opt/JetBrains/jetbrains-toolbox
 exec thunderbird
 exec Telegram
+exec hamster-indicator
 
 
 for_window [class="Gnome-calendar"] floating enable
