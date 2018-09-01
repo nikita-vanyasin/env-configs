@@ -11,3 +11,6 @@ else
     xrandr --output $PRIMARY --primary --auto
     echo "second screen disabled"
 fi
+
+xrandr --dpi 96
+
