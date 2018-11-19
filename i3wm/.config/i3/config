@@ -162,10 +162,10 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command py3status --config ~/.config/i3/status.conf
+        status_command py3status -d --config ~/.config/i3/status.conf
         tray_output primary
         output primary
-        tray_padding 2
+        tray_padding 1
         separator_symbol " | "
 
         colors {
@@ -211,6 +211,7 @@ exec --no-startup-id xsetroot -solid "#000000"
 exec --no-startup-id "setxkbmap -layout us,ru"
 exec --no-startup-id "setxkbmap -option 'grp:caps_toggle,grp_led:caps'"
 exec --no-startup-id ~/touchpad-settings.sh
+exec --no-startup-id parcellite
 
 
 exec google-chrome-stable
@@ -221,6 +222,7 @@ exec hamster-indicator
 
 
 for_window [class="Gnome-calendar"] floating enable
+for_window [class="Gnome-calculator"] floating enable
 for_window [class="upwork"] floating enable
 
 for_window [class="Telegram"] layout stacking
