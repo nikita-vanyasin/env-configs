@@ -1,0 +1,3 @@
+https://help.ubuntu.ru/wiki/ubuntu_optimization
+http://vasilisc.com/speedup_ubuntu
+https://www.reddit.com/r/i3wm/comments/8ktifz/how_to_start_i3_on_ubuntu_1804_without_loading/
