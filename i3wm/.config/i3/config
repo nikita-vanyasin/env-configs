@@ -206,19 +206,19 @@ workspace_auto_back_and_forth yes
 
 exec_always --no-startup-id ~/xrandr-settings.sh
 
-
+exec --no-startup-id ~/i3-battery-popup -L 14 -t 3m -N
 exec --no-startup-id xsetroot -solid "#000000"
 exec --no-startup-id "setxkbmap -layout us,ru"
 exec --no-startup-id "setxkbmap -option 'grp:caps_toggle,grp_led:caps'"
 exec --no-startup-id ~/touchpad-settings.sh
 exec --no-startup-id parcellite
 exec --no-startup-id /usr/bin/blueman-applet
-#exec --no-startup-id "insync start"
 exec google-chrome-stable
 exec --no-startup-id /opt/JetBrains/jetbrains-toolbox
 exec thunderbird
 exec --no-startup-id Telegram
 exec --no-startup-id hamster-indicator
+exec --no-startup-id safeeyes
 
 
 for_window [class="Gnome-calendar"] floating enable
