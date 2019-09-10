@@ -216,11 +216,16 @@ main (){
                 if [[ -z $POPUP_CLICKED ]]; then
                     # first click; set limit lower
                     POPUP_CLICKED="y"
-                    LIMIT=${LOWER_LIMIT}
                 else
                     # We clicked twice; No more popups
                     LIMIT=0
                 fi
+            fi
+
+            if [[ $PERC -lt $LOWER_LIMIT ]]; then
+               debug "lower limit! trying to suspend..."
+               show_message "${MESSAGE}. Suspending..."
+               gksudo systemctl suspend
             fi
         else
             # restart messages, reset limits
